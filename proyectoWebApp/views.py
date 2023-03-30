@@ -9,9 +9,7 @@ def home (request):
 def nosotros (request):
     return render(request, "proyectoWebApp/nosotros.html")
 
-def servicios (request):
-    servicios= Servicio.objects.all()
-    return render(request, "proyectoWebApp/servicios.html",{"servicios":servicios})
+
 
 def tienda (request):
     return render(request, "proyectoWebApp/tienda.html")
