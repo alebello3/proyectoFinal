@@ -1,0 +1,20 @@
+{% extends "ProyectoWebApp/base.html" %}
+
+{% load static %}
+{% block content %}
+
+{% for post in posts %}
+
+<h2 style="color: darkred;">{{post.titulo}}</h2>
+<p>{{post.contenido}}</p>
+<img src="{{post.imagen.url}}" alt="" style="width:50%;">
+
+{% endfor %}
+
+
+
+
+
+
+
+{% endblock %}
