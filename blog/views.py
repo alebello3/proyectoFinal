@@ -12,5 +12,5 @@ def blog(request):
 def categoria(request,categoria_id):
 
     categoria=categoria.objects.get(id=categoria_id)
-    posts = post.objects.filter(categoria=categoria)
+    posts = post.objects.filter(categorias=categoria)
     return render(request, "blog/categoria.html",{'categoria':categoria, "posts":posts})
