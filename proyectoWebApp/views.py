@@ -11,7 +11,3 @@ def nosotros (request):
 
 
 
-def tienda (request):
-    return render(request, "proyectoWebApp/tienda.html")
-
-
