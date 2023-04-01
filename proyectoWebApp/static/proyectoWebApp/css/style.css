@@ -306,7 +306,22 @@ ul.footer-menu li a:hover {
     animation-iteration-count:infinite; 
     -webkit-animation-iteration-count:infinite; 
 } 
+.contenedorFormulario{
 
+    background-color: hsla(0, 9%, 87%, 0.395);
+    width: 50%;
+    margin: 30px auto;
+    border-radius: 6px;
+    padding: 9px 0px;
+    color: black ;
+    font-weight: bold;
+
+    
+
+
+
+
+}
 @-webkit-keyframes bounce { 
     0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);} 
     40% {-webkit-transform: translateY(-30px);} 
