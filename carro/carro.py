@@ -1,4 +1,4 @@
-class carro:
+class Carro:
     def __init__(self,request):
         self.request=request
         self.session=request.session
@@ -9,22 +9,19 @@ class carro:
         self.carro=carro
 
     def agregar(self,producto):
-        if(str(producto.id)not in self.carro.keys()):
+        if(str(producto.id) not in self.carro.keys()):
             self.carro[producto.id]={
-            "producto_id":producto.id,
-            "nombre":producto.nombre,
-            "precio":str(producto.precio),
-            "cantidad":producto.cantidad,
-            "cantidad":1,
-            "imagen":producto.imagen.url,
-
+                "producto_id":producto.id,
+                "nombre":producto.nombre,
+                "precio":str(producto.precio),
+                "cantidad":1,
+                "imagen":producto.imagen.url,
             }
         else:
             for key, value in self.carro.items():
                 if key==str(producto.id):
                     value["cantidad"]=value["cantidad"]+1
-                    break
-        
+                    break 
         self.guardar_carro()
     
     def guardar_carro(self):

@@ -1,68 +1,72 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
     <table style="border-color: red; text-align: center;">
-        <tr>
-            CARRITO DE COMPRAS
-        </tr>
-    
-        <tr>
-    
-    
-            <th>Producto</th>
-            <th>cantidad</th>
-            <th>Suma</th>
-    
-    
-        </tr>
-    
-    
-    </table>
-
-    <tbody>
-
-        {% if request.session.carro.items %}
-            {%  for key, value in request.session.carro.items %}
-                <td >{{value.nombre}}</td>
-                <td >{{value.cantidad}}</td>
-
-                    <a href="{%url 'carro:agregar' value.producto_id %}">+</a>
-                    <a href="{%url 'carro:restar' value.producto_id %}">-</a><br>
-                    {{value.precio}} USD
-            
-
-            {%endfor%}
-
-        {% else%}
+       
+        <thead>
             <tr>
-                <div style="color: red;">sin productos</div>
+
+                <th>
+                    CARRITO DE COMPRAS
+
+                </th>
+
 
             </tr>
-        {% endif%}
-    </tbody>
 
-    <tfoot>
+            <tr>
+                <th>Producto</th>
+                <th>cantidad</th>
+                <th>Suma</th>
 
-
-        <tr>
-            <td>
-
-                TOTAL:{{importe_total_carro}}USD
-            </td>
-
-        </tr>
-    </tfoot>
+    
+            </tr>
 
 
+        </thead>  
+    
+        <tbody>
+
+            {% if request.session.carro.items %}
+    
+                {%  for key, value in request.session.carro.items %}
+                    <tr>
+
+                        <td >{{value.nombre}}</td>
+                        <td >{{value.cantidad}}</td>
+                        <td>
 
 
+                            <a href="{%url 'carro:agregar' value.producto_id %}">+</a>
+                            <a href="{%url 'carro:restar' value.producto_id %}">-</a><br>
+                            {{value.precio}} USD
+
+                        </td>
+
+                    </tr>
+
+                {% endfor %}
+        
+            {% else %}
+
+                <tr>
+                    <td>
+                        <div style="color: red;">sin productos</div>
+                    </td>
+
+                </tr>
+            {% endif %}
+        </tbody>
+
+        <tfoot>
+
+            <tr>
+                <td>
+
+                    TOTAL:{{importe_total_carro}}USD
+                </td>
+
+            </tr>
+            
+         </tfoot>
 
 
-</body>
-</html>
+    </table>
+
