@@ -14,7 +14,7 @@ def agregar_producto(request, producto_id):
 
     Producto=producto.objects.get(id=producto_id)
 
-    carro.agregar(producto=producto)
+    carro.agregar(Producto)
 
     return redirect("tienda")
 
@@ -36,7 +36,7 @@ def restar_producto(request, producto_id):
 
     Producto=producto.objects.get(id=producto_id)
 
-    carro.restar_producto(producto=producto)
+    carro.restar_producto(Producto)
 
     return redirect("tienda")
 
