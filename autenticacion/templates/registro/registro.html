@@ -1,0 +1,25 @@
+{% extends "ProyectoWebApp/base.html" %}
+
+{% load static %}
+{% block content %}
+
+<body style="background-color: black;">
+    
+</body>
+<form method="post" action="">
+
+
+    {% csrf_token %}
+    <h2 style="margin-left: 750px; font-weight: bold;">LOGUEATE</h2>
+    <div style="margin: auto; width: 50%; padding-top: 50px;">
+    {{form}}
+
+    </div>
+
+</form>
+
+<button type="submit" class="btn" style="margin-left: 800px; background-color: darkgreen; color: white;">Registrate</button>
+
+
+
+{% endblock %}
