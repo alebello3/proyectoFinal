@@ -1,0 +1,47 @@
+{% extends "ProyectoWebApp/base.html" %}
+
+{% load static %}
+{% block content %}
+
+<body style="background-color: black;">
+    
+</body>
+<form method="post" action="">
+
+
+    {% csrf_token %}
+
+
+    <h2 style="margin-left: 750px; font-weight: bold;">LOGUEATE</h2>
+    <div style="margin: auto; width: 50%; padding-top: 50px;">
+        
+        {% if messages %}
+
+        {% for mensaje in messages %}
+        
+        <span style="color: red; font-size: 40px; font-weight: bold;">
+        {{mensaje}}
+
+        </span>
+
+
+        {% endfor %}
+
+
+
+        {% endif %}
+        <br><br>
+    {{form}}
+
+    
+    </div>
+    <br>
+    <button type="submit" class="btn" style="margin-left: 700px; background-color: darkgreen; color: white;">Login</button>
+
+
+</form>
+
+
+
+
+{% endblock %}
