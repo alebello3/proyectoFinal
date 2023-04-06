@@ -32,23 +32,23 @@
         <a href="{% url 'contacto' %}" class="nav-navegacion">Contacto</a>
         <a href="{% url 'blog' %}" class="nav-navegacion">Blog</a>
        
-    
-    
+        
     </nav>
     
     <div style="text-align: right; margin-right: 100px;">
       
-        {% if user.is_authenticated %}
-        
-        Hola{{ user.name}} Bienvenido
-        
-        {% else %}
-        No autenticado
-        {% endif%}
+    {% if user.is_authenticated %}
+    Bienvenido, {{ user.username }} &nbsp;&nbsp; <a href="{% url,'cerrar_sesion' %}">cerrar sesion</a>
+    
+
+
+    {% else %}
+    <a href="#">LOGIN</a>  <a href="Autenticacion">REGISTRATE</a>
+    {% endif%}
       
       
     </div>
-  
+    
 
     <body id="page-top" data-spy="scroll" data-target=".side-menu">
  

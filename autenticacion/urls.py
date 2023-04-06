@@ -1,6 +1,6 @@
 
 from django.urls import path
-from . views import VRegistro
+from . views import VRegistro, cerrar_sesion
 
 
 
@@ -8,6 +8,7 @@ from . views import VRegistro
 urlpatterns = [
 
     path('',VRegistro.as_view(), name="Autenticacion"),
+    path('',cerrar_sesion, name="cerrar_sesion"),
     
 ]
 
