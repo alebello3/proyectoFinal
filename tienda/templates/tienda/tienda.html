@@ -11,6 +11,8 @@
         {% if request.user.is_authenticated %}
             {% include "carro/widget.html" %}
         {% else%}
+        LOGIN PARA VER AUTO
+        {% endif %}
     </div>
 
     {% for producto in productos %}
@@ -36,6 +38,8 @@
 
 
     {% endfor %}
+    
+
 
 
 
