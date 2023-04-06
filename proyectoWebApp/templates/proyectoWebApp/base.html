@@ -8,6 +8,7 @@
   <meta name="description" content="Meetup is a free responsive single page bootstrap template by designerdada.com">
   <meta name="author" content="Akash Bhadange">
   <title>Meetup: Free Responsive One Page Bootstrap Template</title>
+  
 
   <!-- Bootstrap -->
   <link href="{% static 'ProyectoWebApp/css/bootstrap.min.css' %}" rel="stylesheet">
@@ -22,7 +23,6 @@
       <![endif]-->
     </head>
 
-
     <nav class="nav2">
 
         <a href="{% url 'home' %}" class="nav-navegacion">Inicio</a>
@@ -35,6 +35,20 @@
     
     
     </nav>
+    
+    <div style="text-align: right; margin-right: 100px;">
+      
+        {% if user.is_authenticated %}
+        
+        Hola{{ user.name}} Bienvenido
+        
+        {% else %}
+        No autenticado
+        {% endif%}
+      
+      
+    </div>
+  
 
     <body id="page-top" data-spy="scroll" data-target=".side-menu">
  
