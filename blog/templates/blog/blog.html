@@ -5,9 +5,13 @@
 
 {% for post in posts %}
 
-<h2 style="color: rgb(238, 10, 10); font-size: 60px; font-weight: bold; margin-left: 400px ;" >{{post.titulo}}</h2>
-<p style="font-weight: 800; margin-left: 400px;">{{post.contenido}}</p>
-<img src="{{post.imagen.url}}" alt="" style="width:50%; margin-left: 400px; border-radius: 30px;">
+<body style="background-color:  #d9e2ec;">
+    
+</body>
+
+<h2 style="color: rgb(238, 10, 10); font-size: 50px; font-weight: bold; text-align: center;" >{{post.titulo}}</h2>
+<p style="font-weight: 800; margin-left: 520px;">{{post.contenido}}</p>
+<img src="{{post.imagen.url}}" alt="" style="width:40%; margin-left: 500px; border-radius: 30px;">
 <div style="font-size: 30px; margin-left: 1000px; margin-top: 1px; font-weight: bold ;">
 
     Autor:{{post.autor}}

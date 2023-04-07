@@ -4,10 +4,15 @@
 {% block content %}
 
 {% for servicio in servicios%}
+<body style="background-color: #d9e2ec;;">
+    
+</body>
 
-<h2 style="color: rgb(238, 10, 10); font-size: 60px; font-weight: bold; margin-left: 400px ; text-align: justify;">{{servicio.titulo}}</h2>
+<h2 style="color: rgb(238, 10, 10); font-size: 50px; font-weight: bold;  text-align: center; margin-bottom: 75px;">{{servicio.titulo}}</h2>
 <p>{{post.contenido}}</p>
-<img src="{{servicio.imagen.url}}" alt="" style="width:50%; margin-left: 300px; border-radius: 30px;">
+
+<img src="{{servicio.imagen.url}}" alt="" style="width:40%; margin-left: 490px; ; border-radius: 30px; ;">
+
 
 {% endfor %}
 

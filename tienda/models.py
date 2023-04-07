@@ -27,4 +27,7 @@ class producto(models.Model):
     class Meta:
 
         verbose_name="producto"
+
+    def __str__(self):
+        return self.nombre
         
